@@ -10,6 +10,18 @@ img {
   max-width: 100%;
 }
 
+.btn-default {
+  background-color: #8393ca;
+  border: 3px solid #ecf0f1;
+  border-radius: 5px;
+  padding: 15px 20px;
+  color: white;
+}
+
+.btn-default:hover {
+  background-color: #97689c;
+}
+
 h2 {
   text-align: center;
   font-size: 2em;
@@ -162,6 +174,48 @@ hr:before {
 
 .margin-bottom {
   margin-bottom: 70px;
+}
+
+/*SHOP ONLINE SECTION*/
+#shop-online {
+  background: url('http://via.placeholder.com/1200x900') center no-repeat;
+  min-height: 900px;
+  color:#494646;
+}
+
+#shop-online .btn-default {
+  margin-top: 25px;
+}
+
+/*FOOTER SECTION*/
+footer {
+  color: white;
+  background: #97689c;
+  line-height: 2em;
+}
+
+footer address {
+  line-height: 2em;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+footer a:hover {
+  color: white;
+}
+
+footer ul {
+  list-style: none;
+}
+
+#copy {
+  text-align: center;
+  background: white;
+  color: #494646;
+  padding-top: 10px;
 }
 
 /*MOBILE STYLING*/
