@@ -20,13 +20,13 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'acupuncture');
+define('DB_NAME', 'database_name_here');
 
 /** MySQL database username */
-define('DB_USER', 'jonny');
+define('DB_USER', 'username_here');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'lGAsRGRF6jHDPxni');
+define('DB_PASSWORD', 'password_here');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
@@ -46,14 +46,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
- define('AUTH_KEY',         '[u<ppSR@mPJ-3Z_pkqF~7Xm:qP]gW;U`ma-;v6cmz#qyZi-B=Pec|;>W{kg0^_!+');
- define('SECURE_AUTH_KEY',  '-O<1sug.3URe*ttxABYIw_sXB8|QLME]bd_&u}N2yaJY-(g?.LNRU&^<efsW?[zz');
- define('LOGGED_IN_KEY',    'wL:{+Q)^-=IV]=@=@.erQ>1-0+eD88q/?J|^-;BH@A[#}Xf>ik>y,2`,y~:z|:.~');
- define('NONCE_KEY',        'MN$+Qc5!6,uT928!wEIxg<.B<m|XSN37)H$oZMu=W#AUVV)E{ #XdE,k$QVMb43]');
- define('AUTH_SALT',        ']{{jezXW5w~41!).q^sNq[S;Z4%zFHQ1A:Ih5!t-v}]p0RgS=Pbz=SUXoEtB!%Jt');
- define('SECURE_AUTH_SALT', 'q|8=~dl<Nz6R-AR7;e<`xhX)Zqg?`}q+(ikP/>G$?[]=-u/4w??J@]3-A46gEK=r');
- define('LOGGED_IN_SALT',   'x2|3t<|kcU*koOV=GW(r46T*|qkyr(59&j(l|~+Q=P_O&8~|Nsp`q$= uo/LuV>I');
- define('NONCE_SALT',       'Cik,-$.$toV3|8O>;b0&i84Q<+xQR5o1KI|vzH-{esiR}|{K-;wiya&*>~45iVA ');
+define('AUTH_KEY',         'put your unique phrase here');
+define('SECURE_AUTH_KEY',  'put your unique phrase here');
+define('LOGGED_IN_KEY',    'put your unique phrase here');
+define('NONCE_KEY',        'put your unique phrase here');
+define('AUTH_SALT',        'put your unique phrase here');
+define('SECURE_AUTH_SALT', 'put your unique phrase here');
+define('LOGGED_IN_SALT',   'put your unique phrase here');
+define('NONCE_SALT',       'put your unique phrase here');
 
 /**#@-*/
 
@@ -63,7 +63,7 @@ define('DB_COLLATE', '');
  * You can have multiple installations in one database if you give each
  * a unique prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix  = 'acupuncturedb_';
+$table_prefix  = 'wp_';
 
 /**
  * For developers: WordPress debugging mode.
@@ -77,7 +77,7 @@ $table_prefix  = 'acupuncturedb_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define('WP_DEBUG', true);
+define('WP_DEBUG', false);
 
 /* That's all, stop editing! Happy blogging. */
 
