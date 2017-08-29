@@ -8,7 +8,7 @@
         <div class="row">
           <div class="col-sm-6 col-sm-offset-3">
             <h2>Welcome to Acupuncture business</h2>
-            <img src="img/purpledivider.png" alt="divider">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/purpledivider.png" alt="divider">
           </div> <!-- /col -->
         </div> <!-- /row -->
         <div class="row facilities">
@@ -42,7 +42,7 @@
         <div class="row margin-bottom">
           <div class="col-sm-6 col-sm-offset-3">
             <h2>Latest Offers</h2>
-            <img src="img/silverdivider.png" alt="divider">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/silverdivider.png" alt="divider">
           </div> <!-- /col -->
         </div> <!-- /row -->
         <div class="row">
@@ -84,7 +84,7 @@
         <div class="row">
           <div class="col-sm-6 col-sm-offset-3 text-center">
             <h2>Shop Online</h2>
-            <img src="img/purpledivider.png" alt="divider">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/purpledivider.png" alt="divider">
             <a href="#" class="btn btn-default" role="button">Shop Here</a>
           </div> <!-- /col -->
         </div> <!-- /row -->

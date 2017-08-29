@@ -9,7 +9,6 @@
 
     <!-- Custom Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -19,8 +18,7 @@
     <![endif]-->
     <?php wp_head(); ?>
   </head>
-  <body>
-    <?php body_class(); ?>
+  <body <?php body_class(); ?>>
   <!-- HEADER -->
   <header>
     <nav class="navbar navbar-default">
@@ -32,14 +30,22 @@
             <span class= "icon-bar"></span>
             <span class= "icon-bar"></span>
           </button>
-          <a href="<?php echo esc_url(home_url()); ?>" class="navbar-brand"><?php echo get_blogginfo('name'); ?></a>
+          <a href="<?php echo esc_url(home_url()); ?>" class="navbar-brand"><?php echo get_bloginfo('name'); ?></a>
         </div> <!-- /navbar-header -->
         <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="">Latest News</a></li>
-          </ul>
+          <?php
+          wp_nav_menu( array(
+            'menu'              => 'primary',
+            'theme_location'    => 'primary',
+            'depth'             => 2,
+            'container'         => 'div',
+            'container_class'   => 'collapse navbar-collapse',
+            'container_id'      => 'bs-example-navbar-collapse-1',
+            'menu_class'        => 'nav navbar-nav navbar-right',
+            'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+            'walker'            => new WP_Bootstrap_Navwalker())
+          );
+          ?>
         </div> <!-- /navbar-collapse -->
       </div> <!-- /container-fluid -->
     </nav>

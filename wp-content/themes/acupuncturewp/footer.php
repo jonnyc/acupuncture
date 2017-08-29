@@ -4,7 +4,7 @@
         <div class="row">
           <div class="col-sm-6 col-sm-offset-3 text-center margin-bottom">
             <h2>Keep in touch</h2>
-            <img src="img/silverdivider.png" alt="divider">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/silverdivider.png" alt="divider">
           </div> <!-- /col -->
         </div> <!-- /row -->
         <div class="row">
