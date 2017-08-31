@@ -19,13 +19,27 @@ function acupuncture_setup() {
   function acupuncture_scripts() {
     // ADD STYLES
     wp_enqueue_style('bootstrap-core', get_template_directory_uri() . '/vendor/bootstrap/css/bootstrap.min.css');
-    wp_enqueue_style('font-awesome', get_template_directory_uri() . '/vendor/font-awesome/css/font-awesome.css');
+    wp_enqueue_style('font-awesome', get_template_directory_uri() . '/vendor/font-awesome/css/font-awesome.min.css');
     wp_enqueue_style('custom', get_template_directory_uri() . '/style.css');
 
     // ADD SCRIPTS
-    wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/vendor/bootstrap/bootstrap.min.js', array('jquery'), true);
+    wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/vendor/bootstrap/js/bootstrap.min.js', array('jquery'), true);
+    if(is_singular()) wp_enqueue_script('comment-reply');
   }
 
   add_action('wp_enqueue_scripts','acupuncture_scripts');
+
+  function wpdocs_excerpt_more( $more ) {
+    return '...';
+  }
+  add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+
+  function feature_text() {
+    if(is_front_page()) {
+      _e('Acupuncture Business');
+    }  elseif(is_home() || is_single()) {
+      _e('Acupuncture Business<br>Official Blog');
+    }
+  }
 
 ?>

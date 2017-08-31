@@ -55,7 +55,7 @@
       <div class="row feature">
         <img src="http://via.placeholder.com/1200x900" alt="Background Image">
         <div class="feature-text col-xs-12 col-md-8 col-lg-6 col-md-offset-2 col-lg-offset-3">
-          <p>ACUPUNCTURE BUSINESS</p>
+          <p><?php feature_text(); ?></p>
         </div> <!-- /feature text -->
       </div> <!-- /row -->
     </div> <!-- /container-fluid -->

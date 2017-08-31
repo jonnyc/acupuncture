@@ -1,6 +1,10 @@
+<?php
 
+/**
+* Single Post Template
+*/
 
-<?php get_header(); ?>
+get_header(); ?>
 
 <!-- BLOG SECTION -->
 <div class="container">
@@ -8,7 +12,7 @@
     <div class="col-sm-12 col-md-8 blog-main">
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
       <div class="blog-post">
-        <h2 class="blog-post-title"><a href="<?php the_permalink(); ?>" title="the_title-attribute();"><?php the_title(); ?></a></h2>
+        <h2 class="blog-post-title"><?php the_title(); ?></h2>
         <p class="blog-post-meta"><?php echo get_the_date('F, j, Y'); ?> by <a href="#"><?php the_author(); ?></a><br>
 
         <i class="fa fa-tag"></i>
@@ -19,9 +23,9 @@
         <?php the_category(', '); ?>
         </p>
 
-        <?php the_excerpt(); ?>
+        <?php the_content(); ?>
 
-        <a href="<?php echo get_permalink(); ?>"><?php _e('Read More...') ?></a>
+        <?php wp_link_pages(); ?>
 
       </div> <!-- /BLOG POST -->
       <?php endwhile; else : ?>
@@ -30,10 +34,14 @@
 
       <nav>
         <ul class="pager">
-          <li><?php next_posts_link('Older Posts'); ?></li>
-          <li><?php previous_posts_link('Newer Posts') ?></li>
+          <li><?php next_post_link(); ?></li>
+          <li><?php previous_post_link(); ?></li>
         </ul>
       </nav>
+
+      <!-- LOAD UP THE COMMENTS TEMPLATE -->
+      <?php comments_template(); ?>
+
     </div><!-- /.blog-main -->
 
     <!-- SIDEBAR SECTION-->
