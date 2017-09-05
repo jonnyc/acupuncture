@@ -36,6 +36,24 @@ function acupuncture_setup() {
   }
   add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 
+  /**
+   * Register our sidebars and widgetized areas.
+   *
+   */
+  function arphabet_widgets_init() {
+
+  	register_sidebar( array(
+  		'name'          => 'Sidebar',
+  		'id'            => 'sidebar_blog',
+  		'before_widget' => '<div class="sidebar-module">',
+  		'after_widget'  => '</div>',
+  		'before_title'  => '<h4>',
+  		'after_title'   => '</h4>',
+  	) );
+
+  }
+  add_action( 'widgets_init', 'arphabet_widgets_init' );
+
   function feature_text() {
     if(is_front_page()) {
       _e('Acupuncture Business');
@@ -51,10 +69,12 @@ function acupuncture_setup() {
         $year = get_query_var('year');
         echo 'Posts from ' . $month . ' ' . $year;
       }
-    } elseif (is_page_template('page-news.php')) {
+    } elseif (is_page_template('page-news.php') || is_page_template('page-about.php') || is_page_template('page-contact.php')) {
       bloginfo('name');
       _e('<br>');
       the_title();
+    } elseif (is_404()) {
+      _e('It seems we are a little lost');
     }
   }
 
