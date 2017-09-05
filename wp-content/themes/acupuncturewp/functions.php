@@ -75,6 +75,10 @@ function acupuncture_setup() {
       the_title();
     } elseif (is_404()) {
       _e('It seems we are a little lost');
+    } elseif (is_search()) {
+      _e('Acupuncture Business<br>Official Blog');
+      _e('<br>');
+      printf(("Search results for: %s"), get_search_query());
     }
   }
 
