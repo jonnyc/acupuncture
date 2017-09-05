@@ -53,7 +53,7 @@
     <!-- FEATURE SECTION -->
     <div class="container-fluid">
       <div class="row feature">
-        <img src="http://via.placeholder.com/1200x900" alt="Background Image">
+        <img src="<?php header_image(); ?>" alt="Background Image">
         <div class="feature-text col-xs-12 col-md-8 col-lg-6 col-md-offset-2 col-lg-offset-3">
           <p><?php feature_text(); ?></p>
         </div> <!-- /feature text -->

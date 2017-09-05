@@ -56,7 +56,7 @@ function acupuncture_setup() {
 
   function feature_text() {
     if(is_front_page()) {
-      _e(get_bloginfo('name'));
+      the_field('feature_text');
     }  elseif(is_home() || is_single()) {
       _e(get_bloginfo('name').'<br>Official Blog');
     } elseif(is_archive()) {
@@ -81,5 +81,14 @@ function acupuncture_setup() {
       printf(("Search results for: %s"), get_search_query());
     }
   }
+
+  $args = array(
+	//'width'         => 980,
+	//'height'        => 60,
+	//'default-image' => get_template_directory_uri() . '/images/header.jpg',
+  'default-image' => 'http://via.placeholder.com/1200x900',
+  'uploads' => true,
+  );
+  add_theme_support( 'custom-header', $args );
 
 ?>
