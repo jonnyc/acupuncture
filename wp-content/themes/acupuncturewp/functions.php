@@ -39,6 +39,20 @@ function acupuncture_setup() {
       _e('Acupuncture Business');
     }  elseif(is_home() || is_single()) {
       _e('Acupuncture Business<br>Official Blog');
+    } elseif(is_archive()) {
+      _e('Acupuncture Business<br>Official Blog');
+      _e('<br>');
+      single_term_title('Browsing: ');
+      if(is_month()) {
+        $monthNum = get_query_var('monthnum');
+        $month = date("F", mktime(0,0,0,$monthNum));
+        $year = get_query_var('year');
+        echo 'Posts from ' . $month . ' ' . $year;
+      }
+    } elseif (is_page_template('page-news.php')) {
+      bloginfo('name');
+      _e('<br>');
+      the_title();
     }
   }
 
