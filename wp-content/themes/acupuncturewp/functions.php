@@ -56,11 +56,11 @@ function acupuncture_setup() {
 
   function feature_text() {
     if(is_front_page()) {
-      _e('Acupuncture Business');
+      _e(get_bloginfo('name'));
     }  elseif(is_home() || is_single()) {
-      _e('Acupuncture Business<br>Official Blog');
+      _e(get_bloginfo('name').'<br>Official Blog');
     } elseif(is_archive()) {
-      _e('Acupuncture Business<br>Official Blog');
+      _e(get_bloginfo('name').'<br>Official Blog');
       _e('<br>');
       single_term_title('Browsing: ');
       if(is_month()) {

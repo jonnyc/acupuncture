@@ -10,7 +10,7 @@
         <div class="row">
           <div class="col-sm-4">
             <address>
-              Acupuncture Business<br>
+              <?php echo get_bloginfo('name'); ?><br>
               Address line 1<br>
               Address line 2<br>
               Address line 3<br>
