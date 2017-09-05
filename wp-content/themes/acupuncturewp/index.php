@@ -19,6 +19,7 @@
         <?php the_category(', '); ?>
         </p>
 
+        <?php the_post_thumbnail(''); ?>
         <?php the_excerpt(); ?>
 
         <a href="<?php echo get_permalink(); ?>"><?php _e('Read More...') ?></a>

@@ -23,6 +23,7 @@ get_header(); ?>
         <?php the_category(', '); ?>
         </p>
 
+        <?php the_post_thumbnail(); ?>
         <?php the_content(); ?>
 
         <?php wp_link_pages(); ?>

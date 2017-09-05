@@ -257,6 +257,11 @@ i {
   padding: 20px;
 }
 
+.blog-post img {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
 /*ABOUT US*/
 #about {
   background: white;

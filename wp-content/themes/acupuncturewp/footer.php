@@ -17,12 +17,14 @@
             </address>
           </div>
           <div class="col-sm-4">
-            <ul>
-              <li><a href="about.html">About</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
-              <li><a href="blog.html">Blog</a></li>
-              <li><a href="">Latest News</a></li>
-            </ul>
+            <?php
+              wp_nav_menu( array(
+                'menu'              => 'footer',
+                'container'         => 'ul',
+                'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                'walker'            => new WP_Bootstrap_Navwalker())
+              );
+            ?>
           </div>
           <div class="col-sm-4">
             <p>Follow Us:</p>
